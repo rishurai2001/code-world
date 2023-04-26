@@ -1,0 +1,28 @@
+.signin-container{
+    display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  margin-top: 10vh; /* adjust this value as needed */
+  max-width: 500px;
+  width: 100%;
+  height: 50vh;
+  background-color: antiquewhite;
+}
+.logo{
+    height: 10vh;
+    padding: 10px;
+}
+ 
+.container{
+    
+}
+.signin-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.signin-btn{
+
+}

@@ -1,7 +1,25 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-const routes: Routes = [];
+import { LoginComponent } from './core/login/login.component';
+import { LogoutComponent } from './core/logout/logout.component';
+import { ContestsComponent } from './components/contests/contests.component'
+import { PracticeComponent } from './components/practice/practice.component';
+import { HomeComponent } from './components/home/home.component';
+import { ProblemComponent } from './components/problem/problem.component';
+
+ 
+
+const routes: Routes = [
+  { path: '', redirectTo: '/home', pathMatch: 'full' },
+  { path: 'home', component: HomeComponent },
+  { path: 'login', component: LoginComponent },
+  { path: 'logout', component: LogoutComponent },
+  { path: 'contests', component: ContestsComponent },
+  { path: 'practice', component: PracticeComponent },
+  { path: 'contests/:contestId/:problemId', component: ProblemComponent },
+  { path: 'practice/:problemId', component: ProblemComponent },
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

@@ -1,0 +1,32 @@
+.container{
+    top: 80px;
+    padding-top: 10px;
+    justify-content: space-between;
+    display: flex;
+    -webkit-box-pack:justify;
+    background-color: aliceblue;
+}
+.site-brand{
+    /* display: flex; */
+    height: 60px
+}
+.site-brand img{
+    vertical-align: middle;
+    height: 40px;
+    padding-left: 10px;
+}
+.nav-right{
+    text-align: right;
+}
+.nav-menu{
+    font-weight: 300;
+    font-size: 15px;
+    margin: 8px;
+}
+.nav-menu a{
+    margin-right: 25px;
+    background-color: transparent;
+    outline: none;
+    cursor: pointer;
+    box-sizing: border-box;
+}

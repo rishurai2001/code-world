@@ -1,0 +1,5 @@
+.problem-component{
+    display: grid;
+    grid-template-columns: 1fr minmax(0, 1fr);
+    grid-template-rows: 100%;
+}

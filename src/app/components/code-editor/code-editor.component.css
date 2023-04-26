@@ -1,0 +1,22 @@
+.editor-wrapper { 
+ 
+background-color: antiquewhite;
+}
+
+#mode-buttons {
+    margin-top: 10px;
+  }
+  
+  #mode-buttons button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-right: 10px;
+    cursor: pointer;
+  }
+  
