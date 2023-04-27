@@ -17,7 +17,8 @@ export class CodeEditorComponent implements OnInit {
   
   modeSelector!: HTMLSelectElement;
   editor!: ace.Ace.Editor;
-
+  submissionResult:string="Mazama gouazcdkDragcdkDragcdkDragcdkDragcdkDragcdkDragcdkDragcdkDragcdkDragcdkDraMazama gouazcdkDragcdkDragcdkDragcdkDragcdkDragcdkDragcdkDragcdkDragcdkDragcdkDraMazama gouazcdkDragcdkDragcdkDragcdkDragcdkDragcdkDragcdkDragcdkDragcdkDragcdkDraMazama gouazcdkDragcdkDragcdkDragcdkDragcdkDragcdkDragcdkDragcdkDragcdkDragcdkDraMazama gouazcdkDragcdkDragcdkDragcdkDragcdkDragcdkDragcdkDragcdkDragcdkDragcdkDragcdkDragcdkDragcdkDragcdkDragcdkDragcdkDragcdkDragcdkDragcdkDragcdkDragcdkDragcdkDragcdkDragcdkDragcdkDragcdkDragcdkDragcdkDragcdkDragcdkDragoubiraProin eu mi. Nulla ac enim. In tempor, turpis nec euismod scelerisque, quam turpis adipiscing lorem, vitae mattis nibh ligula nec sem.";
+  showResult: boolean = false;
   constructor(private elementRef: ElementRef,
             private submitService: SubmitService) { }
 

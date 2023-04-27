@@ -1,6 +1,7 @@
 <div class="problem-component">
-    <div>
-        hello
+    <div cdkDrag>
+       <div class="problem-title">{{problem.title}}</div>
+       <div class="problem-description">{{problem.description}}</div>
     </div>
-    <app-code-editor [contestId]=" 'contestId' " [problemId]=" 'problemId' "></app-code-editor>
+    <app-code-editor [contestId]=" 'contestId' " [problemId]=" 'problemId' "  cdkDrag></app-code-editor>
 </div>

@@ -1,18 +1,145 @@
 <div class="contests-page">
     <div class="contest-table">
        
-       <div class="ongoing-contests">
-        <div class="title-container">
-            <p> ongoing-contests</p>
-        </div>
-       </div>
-       <div class="upcoming-contests">
+
+        <!-- ongoing-contests -->
+         <!-- ongoing-contests -->
+          <!-- ongoing-contests -->
+          <div class="ongoing-contests" >
+            <div class="title-container">
+               <p>ongoing-contests</p>
+            </div>
+            <div>
+               <table mat-table   class="mat-elevation-z8 " [dataSource]="dataSourceToday">
+   
+                   <!-- Code Column -->
+                   <ng-container matColumnDef="id">
+                     <th mat-header-cell *matHeaderCellDef> Id </th>
+                     <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+                   </ng-container>
+                 
+                   <!-- Name Column -->
+                   <ng-container matColumnDef="name">
+                     <th mat-header-cell *matHeaderCellDef> Name </th>
+                     <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+                   </ng-container>
+                 
+                   <!-- Start Column -->
+                   <ng-container matColumnDef="start">
+                     <th mat-header-cell *matHeaderCellDef> Start </th>
+                     <td mat-cell *matCellDef="let element"> {{element.start}} </td>
+                   </ng-container>
+                 
+                   <!-- Duration Column -->
+                   <ng-container matColumnDef="duration">
+                     <th mat-header-cell *matHeaderCellDef> Duration </th>
+                     <td mat-cell *matCellDef="let element"> {{element.duration}} </td>
+                   </ng-container>
+                 
+                   <!-- Starts In Column -->
+                   <ng-container matColumnDef="startsIn">
+                     <th mat-header-cell *matHeaderCellDef> Starts In </th>
+                     <td mat-cell *matCellDef="let element"> {{element.startsIn}} </td>
+                   </ng-container>
+                 
+                   <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                   <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+                 </table>
+            </div>
+          </div>
+       
+
+       <!-- upcoming-contests -->
+       <!-- upcoming-contests -->
+       <!-- upcoming-contests -->
+       <div class="upcoming-contests" >
          <div class="title-container">
             <p>upcoming-contests</p>
          </div>
+         <div>
+            <table mat-table   class="mat-elevation-z8 upcoming" [dataSource]="dataSourceFuture">
+
+                <!-- Code Column -->
+                <ng-container matColumnDef="id">
+                  <th mat-header-cell *matHeaderCellDef> Id </th>
+                 <td mat-cell *matCellDef="let element"> <div>
+                    <button (click)="goToContest(element.id)"><span>{{element.id}}</span> </button>
+                    
+                 </div> </td>
+                </ng-container>
+              
+                <!-- Name Column -->
+                <ng-container matColumnDef="name">
+                  <th mat-header-cell *matHeaderCellDef> Name </th>
+                  <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+                </ng-container>
+              
+                <!-- Start Column -->
+                <ng-container matColumnDef="start">
+                  <th mat-header-cell *matHeaderCellDef> Start </th>
+                  <td mat-cell *matCellDef="let element"> {{element.start}} </td>
+                </ng-container>
+              
+                <!-- Duration Column -->
+                <ng-container matColumnDef="duration">
+                  <th mat-header-cell *matHeaderCellDef> Duration </th>
+                  <td mat-cell *matCellDef="let element"> {{element.duration}} </td>
+                </ng-container>
+              
+                <!-- Starts In Column -->
+                <ng-container matColumnDef="startsIn">
+                  <th mat-header-cell *matHeaderCellDef> Starts In </th>
+                  <td mat-cell *matCellDef="let element"> {{element.startsIn}} </td>
+                </ng-container>
+              
+                <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+              </table>
+         </div>
        </div>
-       <div class="past-contests">
-        <div class="title-container"></div>
-       </div>
+
+       <div class="past-contests" >
+        <div class="title-container">
+           <p>past-contests</p>
+        </div>
+        <div>
+           <table mat-table   class="mat-elevation-z8 upcoming" [dataSource]="dataSourcePast">
+
+               <!-- Code Column -->
+               <ng-container matColumnDef="id">
+                 <th mat-header-cell *matHeaderCellDef> Id </th>
+                 <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+               </ng-container>
+             
+               <!-- Name Column -->
+               <ng-container matColumnDef="name">
+                 <th mat-header-cell *matHeaderCellDef> Name </th>
+                 <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+               </ng-container>
+             
+               <!-- Start Column -->
+               <ng-container matColumnDef="start">
+                 <th mat-header-cell *matHeaderCellDef> Start </th>
+                 <td mat-cell *matCellDef="let element"> {{element.start}} </td>
+               </ng-container>
+             
+               <!-- Duration Column -->
+               <ng-container matColumnDef="duration">
+                 <th mat-header-cell *matHeaderCellDef> Duration </th>
+                 <td mat-cell *matCellDef="let element"> {{element.duration}} </td>
+               </ng-container>
+             
+               <!-- Starts In Column -->
+               <ng-container matColumnDef="startsIn">
+                 <th mat-header-cell *matHeaderCellDef> Starts In </th>
+                 <td mat-cell *matCellDef="let element"> {{element.startsIn}} </td>
+               </ng-container>
+             
+               <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+               <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+             </table>
+        </div>
+      </div>
+      
     </div>
 </div>

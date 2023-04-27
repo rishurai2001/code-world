@@ -1,4 +1,4 @@
-<div class="editor-wrapper">
+<div class="editor-wrapper" >
     <div id="mode-dropdown">
         <select id="mode-selector">
           <option value="javascript">JavaScript</option>
@@ -8,13 +8,28 @@
         </select>
       </div>
     <div>
-        <div id="editor" style="height: 80vh; top: 0; right: 0; bottom: 0; left: 0;" #editor>
-       
+      
+      <div class="container">
+        <div id="editor"#editor>
         </div>
-        <button id="submit" style="float: right" (click)="submitSolution()">Submit</button>
-        <button id="run" style="float: right" >Run</button>
+        <div class="result" *ngIf="showResult">
+          {{submissionResult}}
+        </div>
+      </div>
+          
+          
+          
+          <div class="sumission-buttons" >
+            <button class="console" style="float: left; margin:6px" (click)="showResult = !showResult">Console</button>
+            <div style="float: right;">
+              <button id="submit" style="float: right; margin:6px" (click)="submitSolution()">Submit</button>
+              <button id="run" style="float: right; margin:6px" >Run</button>
+            </div>
+          </div>
+
+        
        
-    </div>
+   
        
         
   </div>

@@ -7,7 +7,7 @@ import { ContestsComponent } from './components/contests/contests.component'
 import { PracticeComponent } from './components/practice/practice.component';
 import { HomeComponent } from './components/home/home.component';
 import { ProblemComponent } from './components/problem/problem.component';
-
+import { ContestComponent } from './components/contest/contest.component';
  
 
 const routes: Routes = [
@@ -17,6 +17,7 @@ const routes: Routes = [
   { path: 'logout', component: LogoutComponent },
   { path: 'contests', component: ContestsComponent },
   { path: 'practice', component: PracticeComponent },
+  { path: 'contests/:contestId', component: ContestComponent },
   { path: 'contests/:contestId/:problemId', component: ProblemComponent },
   { path: 'practice/:problemId', component: ProblemComponent },
 ];
